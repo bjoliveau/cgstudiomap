@@ -25,25 +25,66 @@ body {
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    z-index: 20;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
 .navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .navbar-wrapper .navbar .container {
-  width: auto;
+    width: auto;
 }
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+.navbar-nav > li {
+    float: none;
+    display: inline;
+}
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:active,
+.navbar-inverse .navbar-nav > li > a:visited,
+.container .navbar-nav > li > a,
+.container .navbar-nav > li > a:hover,
+.container .navbar-nav > li > a:active,
+.container .navbar-nav > li > a:visited {
+	color: #fff;
+	background-color: #555;
+}
+.socials > li > a,
+.socials > li > a:hover,
+.socials > li > a:active,
+.socials > li > a:visited {
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #fff;
+    display: inline;
+    list-style-type: none;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75);
+    background-color: transparent;
+    list-style-type: none;
+    display: inline;
+}
+
+
+.navbar-static-top {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* -------------------------------------------------- */
 
 
 
