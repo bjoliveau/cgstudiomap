@@ -107,9 +107,32 @@
 				<header>
 					<div class="navbar-wrapper">
 						<div class="container">
+							
 							<nav class="navbar navbar-inverse navbar-static-top">
 								<div class="container">
-									<div class="navbar-header">
+									
+								<li class="pull-left"><a href="/" title="Home" t-field="res_company.name"><i class="fa fa-circle fa-2x fa-fw"></i></a></li>
+									<t t-foreach="website.menu_id.child_id" t-as="submenu">
+										<t t-call="website.submenu"/>
+									</t>
+									
+								<li class="pull-left"><a href="website" title="Dashboard"><i class="fa fa-th-list fa-2x fa-fw"></i></a></li>
+									
+									
+								<li class="dropdown pull-left" t-ignore="true" t-if="website.user_id != user_id">
+								<a href="#" title="Account" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+									<i class="fa fa-user  fa-2x fa-fw"></i>
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu js_usermenu" role="menu">
+								<li><a href="/web" role="menuitem">My Account</a></li>
+								<li><a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a></li>
+								</ul>
+								</li>				
+									
+
+									
+<!--									<div class="navbar-header">
 										<a class="navbar-brand" href="/" t-field="res_company.name"/>
 									</div>
 										<ul class="nav navbar-nav navbar-left" id="top_menu">
@@ -129,7 +152,7 @@
 													<li><a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a></li>
 												</ul>
 											</li>
-										</ul>
+										</ul>-->
 
 								</div>
 							</nav>
@@ -140,9 +163,31 @@
                 <main>
                     <t t-raw="0"/>
                 </main>
-                <footer>
+				
+				<footer class="footer">
+				  <div class="container">
+						  <ul class="nav navbar-nav">
+							<li class="dropup pull-left">
+							  <a href="#" title="Support" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-question fa-fw"></i><span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+							  </ul>
+							</li>
+							<div class="socials">
+							<li class="pull-right"><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
+							<li class="pull-right"><a href="#"><i class="fa fa-linkedin fa-3x"></i></a></li>
+							<li class="pull-right"><a href="#"><i class="fa fa-github fa-3x"></i></a></li>
+							</div>
+						  </ul>
+				  </div>
+				</footer>
+				
+
+<!--                <footer>
                     <div id="footer_container"></div>
-                </footer>
+                </footer>-->
 
                 <div id="wrapwrap" class="hidden"></div>
 

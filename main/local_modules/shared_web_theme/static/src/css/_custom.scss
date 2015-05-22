@@ -30,36 +30,40 @@ body {
     right: 0;
     left: 0;
     z-index: 20;
+	
+	.container {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.navbar {
+		padding-right: 15px;
+		padding-left: 15px;
+		.container {
+			width: auto;
+		}
+		li {
+			float: none;
+			display: inline;	
+		}
+		li a,
+		li a:hover,
+		li a:active,
+		li a:visited{
+			color: #fff;
+			background-color: #555;
+		}
+	}
 }
 
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-    padding-right: 0;
-    padding-left: 0;
-}
-.navbar-wrapper .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-    width: auto;
-}
 .navbar-nav {
     width: 100%;
     text-align: center;
 }
-.navbar-nav > li {
-    float: none;
-    display: inline;
-}
+
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:active,
-.navbar-inverse .navbar-nav > li > a:visited,
-.container .navbar-nav > li > a,
-.container .navbar-nav > li > a:hover,
-.container .navbar-nav > li > a:active,
-.container .navbar-nav > li > a:visited {
+.navbar-inverse .navbar-nav > li > a:visitedd {
 	color: #fff;
 	background-color: #555;
 }
